@@ -1,0 +1,7 @@
+{% extends '@FlexyAdminFrame/adminpanelbase.html.twig' %}
+{% block content %}
+
+	<p>Размер production кэша: {{ cacheSize }}</p>
+	<a href="{{ path("admin_cacheclear") }}" class="btn btn-danger" data-title="Подтвердите действие" data-message="Очистить кэш?">Очистка кэша</a>
+
+{% endblock %}

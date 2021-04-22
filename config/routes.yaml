@@ -1,0 +1,3 @@
+flexycache_routes:
+  type: annotation
+  resource: '../src/Controller/'
