@@ -2,6 +2,8 @@
 
 namespace flexycms\FlexyCacheBundle\Service;
 
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+
 class CacheService
 {
     const prodCacheDirectory = '/var/cache/prod/twig';
@@ -68,6 +70,14 @@ class CacheService
 
     public function clear(): void
     {
+        /*
+         *
+         * TODO: проверить на проде
+        $cache = new FilesystemAdapter("system.cache");
+        $cache->clear();
+
+        return;
+*/
         $phpPath = PHP_BINDIR . '/php';
         $consolePath = $_SERVER['DOCUMENT_ROOT'] . '/bin/console';
         $result = $this->liveExecuteCommand("{$phpPath} {$consolePath} cache:clear");
