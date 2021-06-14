@@ -1,6 +1,6 @@
 {
   "name": "flexycms/flexycache-bundle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "symfony-bundle",
   "description": "Module for control production cache",
   "license": "proprietary",
